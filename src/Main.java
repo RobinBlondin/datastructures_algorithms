@@ -1,9 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        DoublyLinkedList list = new DoublyLinkedList(1, 2, 3, 4, 5);
-        list.insert(5, 10);
+        Stack stack = new Stack();
+        stack.push(10);
+        stack.push(20);
+        stack.printStack();
+        stack.pop();
+        stack.printStack();
+        stack.pop();
+        stack.printStack();
 
-        list.printAsc();
-        list.printDesc();;
+        Queue queue = new Queue(10);
+        queue.enqueue(20);
+        queue.printQueue();
+        queue.dequeue();
+        queue.printQueue();
+        queue.dequeue();
+        queue.printQueue();
+
     }
 }
