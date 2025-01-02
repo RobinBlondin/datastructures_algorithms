@@ -6,6 +6,7 @@ public class Main {
         graph.addVertex("C");
         graph.addEdge("A", "B");
         graph.addEdge("B", "C");
+        graph.removeVertex("A");
         graph.printGraph();
     }
 }

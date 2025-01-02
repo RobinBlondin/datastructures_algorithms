@@ -47,4 +47,14 @@ public class Graph {
         return true;
     }
 
+    public boolean removeVertex(String vertex) {
+        if(adjList.get(vertex) == null) {
+            return false;
+        }
+
+        adjList.get(vertex).stream().toList().forEach(vertexB -> removeEdge(vertex, vertexB));
+        adjList.remove(vertex);
+        return true;
+    }
+
 }
