@@ -1,12 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        Graph graph = new Graph();
-        graph.addVertex("A");
-        graph.addVertex("B");
-        graph.addVertex("C");
-        graph.addEdge("A", "B");
-        graph.addEdge("B", "C");
-        graph.removeVertex("A");
-        graph.printGraph();
+        MinHeap heap = new MinHeap();
+        heap.insert(99);
+        heap.insert(98);
+        heap.insert(72);
+        heap.insert(73);
+        heap.insert(74);
+        heap.insert(100);
+        heap.insert(34);
+        System.out.println(heap.getMinHeap());
+
+        heap.remove();
+
+        System.out.println(heap.getMinHeap());
+        heap.remove();
+        System.out.println(heap.getMinHeap());
     }
 }
