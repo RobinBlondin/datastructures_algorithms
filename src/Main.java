@@ -1,19 +1,18 @@
+import com.sun.source.tree.BinaryTree;
+
 public class Main {
     public static void main(String[] args) {
-        MinHeap heap = new MinHeap();
-        heap.insert(99);
-        heap.insert(98);
-        heap.insert(72);
-        heap.insert(73);
-        heap.insert(74);
-        heap.insert(100);
-        heap.insert(34);
-        System.out.println(heap.getMinHeap());
-
-        heap.remove();
-
-        System.out.println(heap.getMinHeap());
-        heap.remove();
-        System.out.println(heap.getMinHeap());
+        BinarySearchTree binaryTree = new BinarySearchTree();
+        binaryTree.recursiveInsert(10);
+        binaryTree.recursiveInsert(20);
+        binaryTree.recursiveInsert(5);
+        binaryTree.recursiveInsert(35);
+        binaryTree.recursiveInsert(13);
+        binaryTree.recursiveInsert(15);
+        boolean res = binaryTree.contains(15);
+        System.out.println(res);
+        binaryTree.deleteNode(15);
+        res = binaryTree.contains(15);
+        System.out.println(res);
     }
 }
