@@ -1,13 +1,20 @@
-import com.sun.source.tree.BinaryTree;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Traversal traversal = new Traversal();
+        Sort sort = new Sort();
+        System.out.println(sort.bubbleSort());
+        System.out.println(sort.selectionSort());
+        System.out.println(sort.insertionSort());
 
-        System.out.println(traversal.breadthFirstSearch());
+        List<Integer> list = sort.generateRandomNumbers(20, 1, 100);
+        System.out.println(list);
+        System.out.println(sort.mergeSort(list));
 
-        System.out.println(traversal.depthFirstSearch(DFSOrder.PREORDER));
-        System.out.println(traversal.depthFirstSearch(DFSOrder.INORDER));
-        System.out.println(traversal.depthFirstSearch(DFSOrder.POSTORDER));
+        list = sort.generateRandomNumbers(5, 1, 100);
+        System.out.println(list);
+        sort.quickSort(list, 0, list.size() - 1);
+        System.out.println(list);
+
     }
 }
